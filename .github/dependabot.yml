@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "22:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: aiorpcx[ws]
+    versions:
+    - "0.19"
+    - 0.20.1
+    - 0.21.0
